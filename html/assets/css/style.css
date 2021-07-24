@@ -38,7 +38,11 @@ footer a {
     padding: 10px;
 }
 
-#contenido img {
+#contenido table {
+    margin: auto;
+}
+
+#principal {
     margin-left: 4%;
 }
 
@@ -47,4 +51,74 @@ footer a {
     text-decoration: underline;
     font-weight: bold;
     margin: 10px;
+}
+
+#menu {
+    background-color: #eee;
+}
+
+#menu ul li {
+    display: block;
+    float: left;
+    border-right: #ccc 1px solid;
+}
+
+#menu ul li:hover {
+    background: rgb(16, 75, 143);
+    cursor: pointer;
+}
+
+#menu ul li a {
+    display: block;
+    padding: 15px;
+    color: #444;
+}
+
+#menu ul li:hover a {
+    color: white;
+}
+
+.clearFix {
+    float: none;
+    clear: both;
+}
+
+.subTitulo {
+    text-align: center;
+    color: cornflowerblue;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#contenido form {
+    border: 5px solid blue;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+#contenido form * {
+    display: inline-block;
+}
+
+input[type="text"],
+select {
+    margin-bottom: 15px;
+    padding: 10px;
+    width: 300px;
+}
+
+select {
+    width: 350px;
+}
+
+input[type="submit"],
+button {
+    background: #7D0A42;
+    color: white;
+    padding: 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    border: 1px solid black;
+    cursor: pointer;
 }
