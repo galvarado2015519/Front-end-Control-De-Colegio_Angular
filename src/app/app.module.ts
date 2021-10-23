@@ -9,6 +9,9 @@ import { HomeComponent } from './components/home/home.component';
 import { ModulosComponent } from './components/modulos/modulos.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { LoginComponent } from './components/usuarios/login.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,13 @@ import { FooterComponent } from './components/shared/footer/footer.component';
     HomeComponent,
     ModulosComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     APP_ROUTING
   ],
   providers: [],
