@@ -13,6 +13,7 @@ import { LoginComponent } from './components/usuarios/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './components/usuarios/auth.service';
+import { ClasesService } from './components/home/clases.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { AuthService } from './components/usuarios/auth.service';
     APP_ROUTING
   ],
   providers: [
-    AuthService
+    AuthService,
+    ClasesService
   ],
   bootstrap: [AppComponent]
 })

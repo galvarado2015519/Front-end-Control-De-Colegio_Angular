@@ -28,8 +28,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() : void {
-    console.log(this.usuario);
-
     if (!this.usuario.email || !this.usuario.password) {
       Swal.fire(
         {

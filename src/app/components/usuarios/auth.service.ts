@@ -28,7 +28,7 @@ export class AuthService {
 
   saveUser(payload: any): void {
     this._usuario = payload;
-    sessionStorage.setItem('token', JSON.stringify(this._usuario));
+    sessionStorage.setItem('user', JSON.stringify(this._usuario));
   }
 
   saveToken(token: string): void {
