@@ -10,10 +10,12 @@ import { ModulosComponent } from './components/modulos/modulos.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { LoginComponent } from './components/usuarios/login.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './components/usuarios/auth.service';
 import { ClasesService } from './components/home/clases.service';
+import { AuthInterceptor } from './components/interceptors/auth';
+import { TokenInterceptor } from './components/interceptors/token';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,9 @@ import { ClasesService } from './components/home/clases.service';
   ],
   providers: [
     AuthService,
-    ClasesService
+    ClasesService,
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    {provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true}
   ],
   bootstrap: [AppComponent]
 })

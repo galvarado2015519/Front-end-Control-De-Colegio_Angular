@@ -17,8 +17,17 @@
             </li>
         </ul>
         <ul class="navbar-nav navbar-right">
-            <li>
+            <li *ngIf="!authenticated">
                 <a [routerLink]="['login']" class="btn btn-outline-primary">Login</a>
+            </li>
+            <li *ngIf="authenticated" class="dropdown">
+                <a class="btn btn-outline-primary dropdown-toggle" role="button"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {{name}}
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenulink">
+                    <button (click)="logout()" class="dropdown-item" type="submit">Cerrar Sesión</button>
+                </div>
             </li>
         </ul>
     </div>
