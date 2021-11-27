@@ -9,11 +9,11 @@ import { Clase } from './clase';
 export class ClasesService {
 
   private urlEndPoint = 'http://localhost:8088/kalum-notas/v1/clases';
-  private httpHeaders = new HttpHeaders({'Content-Type': 'application/json', 'Authorization' : `Bearer ${sessionStorage.getItem('token')}`});
+  // private httpHeaders = new HttpHeaders({'Content-Type': 'application/json', 'Authorization' : `Bearer ${sessionStorage.getItem('token')}`});
 
   constructor(private httpClient: HttpClient) { }
 
   getClases(): Observable<Clase[]> { 
-    return this.httpClient.get<Clase[]>(this.urlEndPoint, {headers: this.httpHeaders});
+    return this.httpClient.get<Clase[]>(this.urlEndPoint);
   }
 }

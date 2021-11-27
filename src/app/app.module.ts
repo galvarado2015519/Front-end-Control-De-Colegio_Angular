@@ -16,6 +16,7 @@ import { AuthService } from './components/usuarios/auth.service';
 import { ClasesService } from './components/home/clases.service';
 import { AuthInterceptor } from './components/interceptors/auth';
 import { TokenInterceptor } from './components/interceptors/token';
+import { CarrerasComponent } from './components/carreras/carreras.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { TokenInterceptor } from './components/interceptors/token';
     ModulosComponent,
     AboutComponent,
     FooterComponent,
-    LoginComponent
+    LoginComponent,
+    CarrerasComponent
   ],
   imports: [
     BrowserModule,

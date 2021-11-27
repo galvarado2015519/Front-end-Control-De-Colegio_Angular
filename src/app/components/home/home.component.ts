@@ -33,7 +33,6 @@ export class HomeComponent implements OnInit, OnDestroy {
     this.clasesService.getClases().subscribe(
       data => {
         this.clases = data
-        console.log(this.clases.length);
       },
       error => console.log(error) 
     );

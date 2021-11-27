@@ -46,7 +46,6 @@ export class NavbarComponent implements OnInit {
       footer: 'Kalum v1.0.0'
     }).then((result) =>{
       if(result.isConfirmed) {
-        console.log('Entra al logout')
         this.router.navigate(['/login']);
       }
     })

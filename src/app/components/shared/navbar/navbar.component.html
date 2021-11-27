@@ -12,6 +12,9 @@
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['modulos']">Modulos</a>
             </li>
+            <li *ngIf="authenticated" class="nav-item">
+                <a class="nav-link" [routerLink]="['carreras']">Carreras</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" [routerLink]="['about']">about</a>
             </li>
