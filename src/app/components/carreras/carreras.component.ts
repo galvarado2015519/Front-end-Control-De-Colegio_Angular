@@ -4,9 +4,7 @@ import { CarrerasService } from './carreras.service';
 
 @Component({
   selector: 'app-carreras',
-  templateUrl: './carreras.component.html',
-  styleUrls: ['./carreras.component.scss']
-})
+  templateUrl: './carreras.component.html'})
 export class CarrerasComponent implements OnInit {
 
   carreraTecnica: Carreras;

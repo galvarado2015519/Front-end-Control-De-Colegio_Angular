@@ -1,0 +1,40 @@
+<div class="card bg-dark text-white mb-5">
+    <div class="card-header">Proceso de Asignación</div>
+    <div class="card-body">
+        <form (submit)="saveAsignacion()">
+            <div class="form-group row">
+                <label for="carne" class="col-form-label col-sm-2">Carné</label>
+                <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="usuario.carne" name="carne" id="carne" class="form-control"
+                            placeholder="Número de Carné">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="apellidos" class="col-form-label col-sm-2">Apellidos</label>
+                <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="usuario.apellidos" name="apellidos" id="apellidos" class="form-control"
+                            placeholder="Apellido del Alumno">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="nombres" class="col-form-label col-sm-2">Nombres</label>
+                <div class="col-sm-6">
+                    <input type="text" [(ngModel)]="usuario.nombres" name="nombres" id="nombres" class="form-control"
+                            placeholder="Nombre del Alumno">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="descripcion" class="col-form-label col-sm-2">Descripción</label>
+                <div class="col-sm-6">
+                    <input type="text" readonly [(ngModel)]="clase.descripcion" name="descripcion" id="descripcion" class="form-control"
+                            placeholder="Descripción de la Clase a Asignar">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="d-flex flex-row-reverse col-sm-12">
+                    <button type="submit" class="btn btn-primary" role="button">Realizar Asignación</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

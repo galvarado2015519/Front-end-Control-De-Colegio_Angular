@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Carreras } from './carreras';
 
 @Injectable({
@@ -9,7 +10,7 @@ import { Carreras } from './carreras';
 })
 export class CarrerasService {
 
-  url = 'http://localhost:8088/kalum-notas/v1';
+  url = environment.baseUrl;
 
   constructor(
     private httpClient: HttpClient,

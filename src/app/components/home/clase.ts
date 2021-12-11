@@ -1,7 +1,7 @@
 export class Clase {
-    claseId: number;
-    descripcion: string;
-    ciclo: string;
-    cupoMaximo: number;
-    cupoMinimo: number;
+    claseId?: number;
+    descripcion?: string;
+    ciclo?: string;
+    cupoMaximo?: number;
+    cupoMinimo?: number;
 }

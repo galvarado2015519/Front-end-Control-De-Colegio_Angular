@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit, OnDestroy {
       data => {
         this.clases = data
       },
-      error => console.log(error) 
+      message => alert(message.content.error) 
     );
   }
 

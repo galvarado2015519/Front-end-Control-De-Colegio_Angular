@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import { Auth } from './auth.interface';
 import { Usuario } from './usuario';
 
@@ -11,7 +12,7 @@ export class AuthService {
 
   private _usuario: Usuario;
   private _token: string;
-  url =  'http://localhost:8088/kalum-notas/v1/cuentas/login';
+  url = `${environment.baseUrl}/cuentas/login`;
 
   constructor(private http: HttpClient) { }
 
@@ -71,7 +72,7 @@ export class AuthService {
 
   isAuthenticated(): boolean {
     const payload: Auth = this.getToken(this.token);
-    if (payload && payload.name.length > 0) {
+    if (payload && payload.username.length > 0) {
       return true
     }
     return false;
